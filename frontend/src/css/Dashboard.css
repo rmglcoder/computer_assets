@@ -1,0 +1,53 @@
+
+.navbar {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden ;
+}
+
+/* card */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 10%;
+    padding-left: 8%;
+    padding-right: 8%;
+    text-align: center;
+  }
+  
+  .card {
+    width: calc(33.33% - 20px); /* Calculate width for three columns with margins */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    font-family: "Poppins";
+    text-align: center;
+    padding-top: 3%;
+  }
+  
+  .card-image {
+    width: 40%;
+    height: auto;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #001642;
+    font-weight: bold;
+  }
+  
+  .card-description {
+    font-size: 16px;
+    color: #666;
+  }
+  
