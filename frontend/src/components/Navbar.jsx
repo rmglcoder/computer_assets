@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { MenuIcon } from '@heroicons/react/solid';
-import { ArrowLeftIcon } from '@heroicons/react/outline'; 
-
+// import { HomeIcon, ShoppingCartIcon, UsersIcon, LogoutIcon } from "@heroicons/react/outline";
 import '../css/Navbar.css';
 
 function Navbar() {
@@ -15,7 +13,7 @@ function Navbar() {
     <nav className="navbar">
       {/* Side menu icon */}
       <div className="menu-icon" onClick={toggleSideMenu}>
-        <MenuIcon className="h-6 w-6" /> 
+        <MenuIcon className="h-6 w-6 text-gray-500" />
       </div>
       {/* Search bar (on the right side) */}
       <div className="search-bar">
@@ -27,16 +25,38 @@ function Navbar() {
         <div className="side-menu">
           {/* Back button to close side menu */}
           <button onClick={toggleSideMenu} className="back-button">
-            <ArrowLeftIcon />
+            <ArrowLeftIcon className="h-6 w-6 text-gray-500" />
           </button>
-          {/* Other content for the side menu */}
+          {/* Menu content */}
           <ul>
-            <li>Option 1</li>
-            <li>Option 2</li>
-            <li>Option 3</li>
+            <li>
+              <a href="/dashboard" className="menu-item">
+                <HomeIcon className="icon" />
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="/inventory" className="menu-item">
+                <InventoryIcon className="icon" />
+                Inventory
+              </a>
+            </li>
+            <li>
+              <a href="/employees" className="menu-item">
+                <EmployeesIcon className="icon" />
+                Employees
+              </a>
+            </li>
+            <li>
+              <a href="#" className="menu-item" onClick={handleSignOut}>
+                <LogoutIcon className="icon" />
+                Sign Out
+              </a>
+            </li>
           </ul>
         </div>
       )}
+
     </nav>
   );
 }

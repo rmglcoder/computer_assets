@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 import '../css/Dashboard.css';
 import '../css/Modal.css';
 import Modal from '../components/Modal';
@@ -17,6 +18,7 @@ function Card({ title, description, imageUrl, onClick }) {
 
 function CardContainer() {
   const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const openModal = () => {
     setShowModal(true);
@@ -24,6 +26,10 @@ function CardContainer() {
 
   const closeModal = () => {
     setShowModal(false);
+  };
+
+  const handleInventoryClick = () => {
+    navigate('/inventory'); // Navigate to the InventoryPage
   };
 
   return (
@@ -44,6 +50,7 @@ function CardContainer() {
           title="INVENTORY"
           description="List of inventory of computer assets"
           imageUrl={require("../img/inventory.png")}
+          onClick={handleInventoryClick} // Call handleInventoryClick when Inventory card is clicked
         />
         <Card
           title="Card 3"

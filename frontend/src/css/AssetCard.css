@@ -1,0 +1,183 @@
+/* AssetCard.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.inventory-page {
+    padding: 5%;
+}
+.asset-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 5 columns */
+    gap: 20px; /* Space between cards */
+  }
+  
+  .asset-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    font-family: 'Poppins';
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  
+  .asset-detail {
+    margin-bottom: 8px;
+  }
+  
+  .asset-detail strong {
+    margin-right: 8px;
+    font-weight: bold;
+
+  }
+  .serial {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .button-group {
+     bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .button-group button {
+    padding: 6px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: transparent;
+    color: black;
+    width: 50px;
+  }
+
+  /* EditAssetModal.css */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 2px 8px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  button[type="button"] {
+    background-color: #f8f9fa;
+    color: #212529;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #e2e6ea;
+  }
+  
+  .notification {
+    font-family: 'Poppins';
+    position: fixed;
+    top: 20px;
+    right: -300px; /* Initially position notification outside the viewport */
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 9999;
+    animation: slideIn 0.5s forwards; /* Animation name, duration, and fill mode */
+  }
+  
+  @keyframes slideIn {
+    from {
+      right: -300px; /* Start position */
+    }
+    to {
+      right: 20px; /* End position */
+    }
+  }
+
+  .delete-input 
+  {
+    margin-left: 5%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+  }
+
+  .delete-button {
+    background-color: #31559C;;
+    width: 50%;
+    color: white;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    align-items: center;
+    font-family: "Poppins";
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border-radius: 15px;
+  }
+
+  .delete-content {
+    background-color: white;
+    padding-top: 20px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    font-size: large;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  

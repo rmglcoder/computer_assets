@@ -59,11 +59,9 @@ const inventorySchema = new Schema(
     },
     notes: {
         type: String,
-        required: true
     },
     remarks: {
         type: String,
-        required: true
     }
   },
   { timestamps: true }

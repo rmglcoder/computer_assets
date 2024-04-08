@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import Dashboard from './pages/Dashboard.jsx';
+import Inventory from './pages/InventoryPage.jsx'
 import { AssetsContextProvider } from './context/AssetsContext';
 
 function App() {
@@ -18,6 +19,10 @@ function App() {
             <Route 
               path="/dashboard"
               element={<Dashboard />}
+            />  
+            <Route 
+              path="/inventory"
+              element={<Inventory />}
             />  
           </Routes>
         </BrowserRouter>

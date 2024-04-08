@@ -56,27 +56,40 @@
   font-weight: bold;
 }
 
-.search-bar button:hover {
-
-}
 
 .side-menu {
   position: fixed;
   top: 0;
   left: 0;
+  width: 240px;
   height: 100%;
-  width: 250px; 
-  background-color: #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  color:  #31559C;
-  padding-top: 60px; 
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  padding-top: 20px;
 }
 
 .back-button {
-  color: #31559C;
-  width: 38px;
-  border-radius: 20px;
   border: none;
   background: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
 }
